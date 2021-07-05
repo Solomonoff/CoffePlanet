@@ -23,15 +23,7 @@ body{
 	line-height: 1.2;
 }
 
-.btn-reset{
-	appearance: none;
-  	border-radius: 0;
-  	opacity: 1;
-	border: none;
-	background-color: transparent;
-	font: inherit;
-	cursor: pointer;
-}
+
 
 ::-webkit-scrollbar{
 	width: 10px;
@@ -130,3 +122,58 @@ a{
 
 /* General */
 
+.banner{
+	padding-top: 190px;
+	padding-bottom: 265px;
+	background-image: url(../img/bg.jpg);
+	background-size: cover;
+	background-position: center;
+
+	&__text{
+		font-size: 90px;
+		.size(7);
+		line-height: 1.2;
+		margin: 0;
+		margin-bottom: 41px;
+	}
+
+	&__btn{
+		.btn-reset();
+		height: 56px;
+		font-weight: @fontSBold;
+		padding-left: 55px;
+		padding-right: 55px;
+		border-radius: 28.5px;
+		vertical-align: bottom;
+		transition: @transT;
+		&_colored{
+			box-shadow: 0px 7px 21px 0px rgba(55, 125, 60, 0.3);
+			background-color: @colorMain;
+			color: #fff;
+			&:hover{
+				background-color: @colorHLine;
+			}
+			&:focus{
+				background: #97C89A;
+				box-shadow: 0px 7px 21px rgba(55, 125, 60, 0.3);
+				border-radius: 50px;
+			}
+		}
+
+		&_transparent{
+			margin-left: 18px;
+			border: 2px solid @colorHLine;
+			&:hover{
+				background-color: @colorHLine;
+				color: #fff;
+			}
+			&:focus{
+				background: #97C89A;
+				border: 2px solid #97C89A;
+				box-sizing: border-box;
+				border-radius: 50px;
+				color: #fff;
+			}
+		}
+	}
+}

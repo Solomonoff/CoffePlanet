@@ -1,7 +1,7 @@
 @import 'libs/smart-grid.less';
 @import 'libs/vars.less';
 @import 'libs/mixins.less';
-@import '_header.less';
+
 
 /* Set defaults */
 
@@ -22,6 +22,14 @@ body{
 	font-weight: @fontNormal;
 	line-height: 1.2;
 }
+
+ul,
+li{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
 
 
 
@@ -120,7 +128,17 @@ a{
 	overflow: hidden;
 }
 
+.main-heading{
+	font-size: 48px;
+	font-weight: @fontNormal;
+	margin: 0;
+	text-align: center;
+	line-height: 1.1;
+}
+
 /* General */
+
+@import '_header.less';
 
 .banner{
 	padding-top: 190px;
@@ -175,5 +193,103 @@ a{
 				color: #fff;
 			}
 		}
+	}
+}
+
+.menu{
+	padding-top: 180px;
+	padding-bottom: 84px;
+
+	&__h{
+		margin-bottom: 44px;
+
+	}
+
+	&__text{
+		width: 50%;
+		text-align: center;
+		margin: 0 auto;
+		font-size: 14px;
+		color: @colorTextGraySection;
+		margin-bottom: 50px;
+	}
+
+	&__tabs{
+		margin-bottom: 40px;
+	}
+}
+
+.tabs{
+	display: flex;
+	justify-content: center;
+	align-items: baseline;
+	padding: 0;
+
+	&__items{
+		@offset: 4px;
+		padding-left: @offset;
+		padding-right: @offset;
+
+		& + &{
+			margin-left: 60px;
+		}
+
+		&.active,
+		&:hover{
+			border-bottom: 2px solid @colorHLine;
+
+			a{
+				color: @colorMain;
+			}
+		}
+	}
+
+	&__link{
+		color: #000;
+		font-weight: @fontSBold;
+	}
+}
+
+.tabs-content{
+
+	&__section{
+		display: none;
+
+		&.active{
+			display: block;
+		}
+	}
+
+	&__wrap{
+		.row-flex();
+		.xs-block({
+			justify-content: center;
+		});
+	}
+
+}
+
+.product{
+	text-align: center;
+	.col();
+	.size(3);
+	.size-md(4);
+	.size-sm(6);
+	.size-xs(10);
+	margin-bottom: 20px;
+	
+
+	&__pic{
+		margin-bottom: 26px;
+	}
+
+	&__name{
+		margin-bottom: 13px;
+		margin: 0;
+	}
+
+	&__price{
+		font-weight: @fontBold;
+		color: @colorMain;
 	}
 }

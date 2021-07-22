@@ -1,19 +1,35 @@
-<div class="modal-overlay">
+
+<div class=" modal-overlay">
     <div class="modal modal-form">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ullam voluptatem deleniti fugit iusto porro quae eaque mollitia libero provident quod quisquam corporis repellendus natus quos, similique voluptate, consequuntur, odio architecto dolore deserunt nulla dolor? Dignissimos mollitia quisquam itaque voluptatem at quam ratione nulla. Natus esse, perferendis dolorum cupiditate quos nemo quam ipsam possimus eveniet veniam vero ullam repudiandae beatae voluptatum reprehenderit, quae sint? Perferendis, ratione similique quia aut molestias exercitationem. Quos repellendus saepe totam, pariatur rerum dolores nam modi doloribus accusamus recusandae quia aliquid consequatur suscipit? Culpa autem reprehenderit illum, iure voluptatibus incidunt eum impedit itaque. Expedita hic eligendi, similique et rerum libero. Reprehenderit deserunt vitae nulla ipsam sunt culpa possimus assumenda aperiam quidem aspernatur itaque pariatur perspiciatis labore eum rerum porro debitis aliquam recusandae voluptatem, id natus incidunt hic! Quae a quia laboriosam voluptates ab sapiente maxime perferendis modi quo nesciunt ex est saepe dolorem repudiandae pariatur, similique sint inventore. Alias enim explicabo nostrum modi, sapiente laboriosam minus ut ullam iusto. Minus iusto eligendi aperiam odit dicta, voluptates ad eum autem voluptate quasi doloremque earum minima quis atque in, aliquam voluptatum! Quaerat, id officiis asperiores necessitatibus ea nulla, amet rerum minima ratione dolor voluptate! Quos nobis provident, itaque maiores labore autem distinctio deleniti inventore quo soluta aspernatur reiciendis nam corrupti minus necessitatibus ut, ipsum nisi! Quaerat fugiat quod iste soluta vel tempora minus et nesciunt voluptas ea quibusdam quo, vero nostrum. Impedit distinctio quod alias iste non rem, vero exercitationem ipsa temporibus optio eligendi. Itaque nisi iste reprehenderit placeat adipisci atque quo, ut alias autem dicta, neque maiores libero labore! Totam est modi recusandae odit perspiciatis fuga! Cumque ullam eligendi illum vel. Optio dolore enim nesciunt iste consequuntur placeat, velit ut soluta accusamus deserunt, in voluptatem alias, deleniti quod similique quam perspiciatis doloremque nemo. Aliquam incidunt sapiente veritatis.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere qui nisi sunt voluptatum ex, quos exercitationem accusantium mollitia recusandae, nostrum harum sequi a neque perferendis amet veniam dolore ab doloremque aliquam vitae suscipit praesentium architecto. Culpa, quasi quos! Iste, sunt exercitationem? Id quo quasi nesciunt cum consectetur numquam beatae vel quod! Nam excepturi fuga pariatur vel, a quam quibusdam beatae nostrum impedit aspernatur minima nemo explicabo natus atque maxime odio, sunt repellendus. Officiis eum deleniti laboriosam perspiciatis ullam eligendi harum iste commodi voluptate. Distinctio eaque veniam ea facilis fuga repudiandae, assumenda impedit consequatur libero maxime sapiente! Consequatur unde incidunt ut.
+        <h2 class="modal-form__h">
+            Book a table
+        </h2>
+        <p class="modal-form__p">
+            Leave your phone number and we will contact you
         </p>
+        <form class="modal-form__form" action="#">
+            <p>
+                <label for="client-name">Name:</label>
+                <input id="client-name" type="text">
+            </p>
+            <p>
+                <label for="client-phone">Phone:</label>
+                <input id="client-phone" type="number">
+            </p>
+            
+        </form>
+        <button class="modal-form__button">Send</button>
     </div>
-    <div class="modal modal-video">
+    <!-- <div class="modal modal-video">
         
     </div>
     <div class="modal modal-alert">
         
-    </div>
+    </div> -->
 </div>
 
 <button aria-label="close a modal window" class="modal-overlay__close">
-    {% include './parts/svgo/ico-close.svg' %}
+    {% include 'parts/svgo/ico-close.svg' %}
 </button>
 
 <script src="./js/js.js"></script>

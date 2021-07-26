@@ -1,5 +1,5 @@
 .modal-overlay{
-    
+    display: none;
     position: fixed;
     top: 0;
     right: 0;
@@ -7,8 +7,10 @@
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.7);
     
+    
 
     &__close{
+        
         padding: 0;
         position: absolute;
         top: 3%;
@@ -17,11 +19,16 @@
         
     }
 
+    &.active{
+        display: block;
+    }
 
+   
+    
 }
 
 .modal{
-    
+    display: none;
     padding: 10px;
     width: 97%;
     max-width: 964px;
@@ -29,10 +36,136 @@
     background-color: #fff;
     border-radius: 4px;
     max-height: 70%;
-    min-height: 50%;
+    min-height: 70%;
     overflow-y: auto;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+
+    &.active{
+        display: block;
+    }
    
+}
+
+.modal-form{
+    position: relative;
+    
+    text-align: center;
+    &__h{
+        margin: 0;
+        padding: 0;
+        padding-top: 90px;
+        font-weight: @fontNormal;
+        font-size: 48px;
+        
+    }
+
+    &__p{
+        color: @colorTextGraySection;
+        font-weight: @fontNormal;
+        font-size: 14px;
+        line-height: 21px;
+        width: 237px;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        
+       
+        
+    }
+
+    &__form{
+        
+        input{
+            display: block;
+            width: 38%;
+            border: none;
+            border-bottom: 1px solid #111;
+            padding: 5px;
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        label{
+            
+            display: block;
+            padding-top: 0;
+            position: relative;
+            right: 120px;
+            
+        }
+    }
+    &__button{
+        
+        .btn-reset();
+		height: 56px;
+		padding-left: 86px;
+		padding-right: 86px;
+		border-radius: 50px;
+        background-color: @colorMain;
+        color: #fff;
+        font-weight: @fontSBold;
+        font-size: 16px;
+        line-height: 20px;
+        margin: 42px;
+    }
+
+    
+}
+
+.modal-alert{
+    text-align: center;
+    
+    &__ico1{
+        position: relative;
+       top: 140px;
+        
+    }
+
+    &__ico2{
+        position: relative;
+       top: 95px;
+        
+    }
+
+    &__h{
+        font-weight: @fontNormal;
+        font-size: 48px;
+        padding-top: 78px;
+    }
+
+    &__p{
+        font-weight: @fontNormal;
+        font-size: 14px;
+        color: @colorTextGraySection;
+        
+    }
+}
+
+.modal-video{
+    
+    width: 50%;
+    margin: 0 auto;
+    
+    &__wrap{
+        width: 50%;
+        margin: 0 auto;
+       
+        position: relative;
+        &__vieo{
+            
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+
+            
+
+        }
+    }
 }

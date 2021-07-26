@@ -1,6 +1,6 @@
 
-<div class=" modal-overlay">
-    <div class="modal modal-form">
+<div class="active modal-overlay">
+    <div class=" modal modal-form">
         <h2 class="modal-form__h">
             Book a table
         </h2>
@@ -9,28 +9,47 @@
         </p>
         <form class="modal-form__form" action="#">
             <p>
-                <label for="client-name">Name:</label>
+                <label for="client-name">Name</label>
                 <input id="client-name" type="text">
             </p>
             <p>
-                <label for="client-phone">Phone:</label>
-                <input id="client-phone" type="number">
+                <label for="client-phone">Phone</label>
+                <input id="client-phone" type="text">
             </p>
             
         </form>
         <button class="modal-form__button">Send</button>
     </div>
-    <!-- <div class="modal modal-video">
-        
+    <div class="active modal modal-video">
+        <div class="modal-video__wrap">
+            <iframe class="wrap__video" width="560" height="315" src="https://www.youtube.com/embed/jNQXAC9IVRw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
     </div>
     <div class="modal modal-alert">
+        <div class="modal-alert__ico1">
+            {% include 'parts/svgo/Vector1.svg' %}
+            
+        </div>
+        <div class="modal-alert__ico2">
+            {% include 'parts/svgo/Vector2.svg' %}
+
+        </div>
         
-    </div> -->
+        <h2 class="modal-alert__h">
+            Thank you!
+        </h2>
+        <p class="modal-alert__p">
+            We will contact you as soon as possible
+        </p>
+        
+    </div>
+    <button aria-label="close a modal window" class="modal-overlay__close">
+        {% include 'parts/svgo/ico-close.svg' %}
+    </button>
 </div>
 
-<button aria-label="close a modal window" class="modal-overlay__close">
-    {% include 'parts/svgo/ico-close.svg' %}
-</button>
+
+
 
 <script src="./js/js.js"></script>
 </body>

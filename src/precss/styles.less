@@ -378,3 +378,60 @@ a{
 	}
 }
 
+.feauters{
+    text-align: center;
+    &__h{
+        font-weight: @fontNormal;
+        font-size: 48px;
+        line-height: 58.51px;
+    }
+
+    &__p{
+       
+		width: 50%;
+		text-align: center;
+		margin: 0 auto;
+		font-size: 14px;
+		color: @colorTextGraySection;
+		
+    }
+
+    &__feauters{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+		padding-top: 92px;
+		
+		&::after{
+			
+			position: absolute;
+			content: ' ';
+			
+			border-right: 1px solid #ddd;
+			border-left: 1px solid #ddd;
+			height: 165px;
+			padding-left: 567px;
+			margin-top: -34px;
+				
+		}
+
+		&::before{
+			position: absolute;
+			content: ' ';
+			border-right: 1px solid #ddd;
+			height: 165px;
+			
+			margin-top: -34px;
+		}
+
+		&__ico{
+			width: 70px;
+		height: 70px;
+		}
+		
+        
+        
+
+    }
+}
+

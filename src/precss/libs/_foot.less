@@ -120,7 +120,7 @@
     
     &__ico{
         position: relative;
-       top: 140px;
+       top: 84px;
     }
 
     &__h{
@@ -164,43 +164,62 @@
 }
 
 .contacts{
-
+    width: 100%;
+    .row();
+    
     &__cont{
-
-        display: flex;
-
+        
+        width: 100%;
+       .col();
+       .size(4);
+        
     }
     
     &__h{
-        display: block;
+        
         font-weight: @fontNormal;
         font-size: 48px;
         padding-bottom: 18px;
     }
 
     &__p{
-        display: block;
+        
         position: relative;
         font-weight: @fontNormal;
         font-size: 16px;  
         padding-left: 40px;
+
+        &_1{
+            bgi
+        }
     }
 
     &__net{
-        display: block;
+        
         padding-top: 18px;    
         .btn-reset();
     }
 
     &__map{
-        display: flex;
+        .col();
+        .size(8);
+        
         height: 461px;
-        width: 66%px;
+        width: 767px;
         position: relative;
+        background-image: url(img/map.jpg);
 
+        &_a{
+            height: 461px;
+            width: 767px;}
+            position: absolute;
         &_iframe{
-            background-color: #111;
-            display: flex;
+            
+            height: 461px;
+            width: 767px;
+           
+           
+            
         }
     }
 }

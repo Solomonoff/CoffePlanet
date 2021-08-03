@@ -426,7 +426,7 @@ a{
 
 		&__ico{
 			width: 70px;
-		height: 70px;
+			height: 70px;
 		}
 		
         
@@ -448,7 +448,7 @@ a{
 
 	&__card{
 		
-		display: inline-block;
+		display: flex;
 		
 		width: 373px;
 		height: 512px;
@@ -462,7 +462,9 @@ a{
 
 	}
 	&__photo{
-		display: flex;
+		display: block;
+		width: 120px;
+		height: 120px;
 		justify-content: start;
 		padding-left: 30px;
 		padding-bottom: 10px;
@@ -470,6 +472,7 @@ a{
 	}
 
 	&__name{
+		display: block;
 		font-weight: @fontSBold;
 		color: #111;
 		text-align: start;
@@ -478,6 +481,7 @@ a{
 	}
 
 	&__comment{
+		display: block;
 		line-height: 23.54px;
 		font-size: 16px;
 		text-align: start;
@@ -488,10 +492,20 @@ a{
 	}
 
 	&__date{
+		display: block;
 		color: #777;
 		text-align: start;
 		padding-left: 15px;
 		padding-top: 60px;
+	}
+
+	&__col{
+		.row();
+		text-align: center
+		.col();
+		.size(3);
+	
+		
 	}
 }
 

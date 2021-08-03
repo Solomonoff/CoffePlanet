@@ -22,6 +22,8 @@ body{
 	font-size: 16px;
 	font-weight: @fontNormal;
 	line-height: 1.2;
+	margin: 0;
+	padding: 0;
 }
 
 ul,
@@ -203,7 +205,6 @@ a{
 
 	&__h{
 		margin-bottom: 44px;
-
 	}
 
 	&__text{
@@ -267,7 +268,6 @@ a{
 			justify-content: center;
 		});
 	}
-
 }
 
 .product{
@@ -278,7 +278,6 @@ a{
 	.size-sm(6);
 	.size-xs(10);
 	margin-bottom: 20px;
-	
 
 	&__pic{
 		margin-bottom: 26px;
@@ -358,9 +357,11 @@ a{
 	
 
 	&__btn{
+
 		.btn-reset();
 		width: 19px;
 		padding: 0;
+
 		&_prev{
 			&:hover{
 				transform: scale(1.2);
@@ -368,18 +369,20 @@ a{
 		}
 
 		&_next{
+
 			padding-left: 15px;
 			&:hover{
 				transform: scale(1.2);
 				
 			}
-
 		}
 	}
 }
 
 .feauters{
+
     text-align: center;
+
     &__h{
         font-weight: @fontNormal;
         font-size: 48px;
@@ -387,13 +390,11 @@ a{
     }
 
     &__p{
-       
 		width: 50%;
 		text-align: center;
 		margin: 0 auto;
 		font-size: 14px;
 		color: @colorTextGraySection;
-		
     }
 
     &__feauters{
@@ -403,24 +404,20 @@ a{
 		padding-top: 92px;
 		
 		&::after{
-			
 			position: absolute;
-			content: ' ';
-			
+			content: '';
 			border-right: 1px solid #ddd;
 			border-left: 1px solid #ddd;
 			height: 159px;
 			padding-left: 567px;
-			margin-top: -34px;
-				
+			margin-top: -34px;	
 		}
 
 		&::before{
 			position: absolute;
-			content: ' ';
+			content: '';
 			border-right: 1px solid #ddd;
 			height: 159px;
-			
 			margin-top: -34px;
 		}
 
@@ -428,18 +425,14 @@ a{
 			width: 70px;
 			height: 70px;
 		}
-		
-        
-        
-
     }
 }
 
 .visitors{
 	
 	text-align: center;
+
 	&__h{
-		
 		padding-top: 150px;
 		font-weight: @fontNormal;
         font-size: 48px;
@@ -447,9 +440,6 @@ a{
 	}
 
 	&__card{
-		
-		display: flex;
-		
 		width: 373px;
 		height: 512px;
 		background-color: #fff;
@@ -457,10 +447,10 @@ a{
 		box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
 		border-radius: 10px;
 		padding: 30px;
-
-		
-
+		.col();
+		.size(4);
 	}
+
 	&__photo{
 		display: block;
 		width: 120px;
@@ -468,7 +458,6 @@ a{
 		justify-content: start;
 		padding-left: 30px;
 		padding-bottom: 10px;
-		
 	}
 
 	&__name{
@@ -499,13 +488,10 @@ a{
 		padding-top: 60px;
 	}
 
-	&__col{
-		.row();
-		text-align: center
-		.col();
-		.size(3);
-	
+	&__row{
 		
+		.row();
+	
 	}
 }
 

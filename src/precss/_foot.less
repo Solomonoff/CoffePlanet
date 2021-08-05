@@ -164,49 +164,34 @@
 }
 
 .contacts{
-    width: 100%;
     .row();
+    width: 100%;
     
+
     &__cont{
-        
-        width: 100%;
-       .col();
-       .size(4);
-        
+        display: flex;
+    }
+
+    &__mnm{
+        .col();
+        .size(8);
     }
     
     &__h{
-        
         font-weight: @fontNormal;
         font-size: 48px;
         padding-bottom: 18px;
     }
 
     &__p{
-        
-        position: relative;
         font-weight: @fontNormal;
         font-size: 16px;  
+        color: #000;
         padding-left: 40px;
+        width: 375px;
 
-        &_1{
-            background-image: url(img/ico-time.png);
-            width: 16px;
-            height: 16px;
-            
-        }
 
-        &_2{
-            background-image: url(img/ico-adress.png);
-        }
-
-        &_3{
-            background-image: url(img/ico-phone.png);
-        }
-
-        &_4{
-            background-image: url(img/ico-email.png);
-        }
+        
     }
 
     &__net{
@@ -216,25 +201,12 @@
     }
 
     &__map{
+    
+    
         .col();
-        .size(8);
-        
-        height: 461px;
-        width: 767px;
-        position: relative;
+        .size(4);
         background-image: url(img/map.jpg);
 
-        &_a{
-            height: 461px;
-            width: 767px;}
-            position: absolute;
-        &_iframe{
-            
-            height: 461px;
-            width: 767px;
-           
-           
-            
-        }
+       
     }
 }

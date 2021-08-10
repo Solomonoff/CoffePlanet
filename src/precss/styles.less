@@ -139,6 +139,76 @@ a{
 	line-height: 1.1;
 }
 
+.btn-mobile{
+	display: none;
+	@size: 30px;
+	width: @size;
+	height: @size;
+	padding: 0;
+	margin: 0;
+	background-color: transparent;
+	border: none;
+	border-top: 2px solid #000;
+	position: relative;
+	transition: @transT;
+	&::before,
+	&::after{
+		content: '';
+		display: block;
+		width: 100%;
+		height: 2px;
+		background-color: #000;
+		position: absolute;
+		left: 0;
+	}
+
+	&::before{
+		top: 50%;	
+		transform: translateY(-50%);
+		margin-top: -1px;
+	}
+
+	&::after{
+		bottom: 0;
+	}
+
+	&:hover{
+		border-top-color: @colorMain;
+	
+	}
+
+	&:hover::before,
+	&:hover::after{
+		background-color: @colorMain;
+	}
+
+	&.is-open{
+		border-top-color: transparent;
+		position: fixed;
+		top: 20px;
+		right: 20px;
+		 
+
+		&::after{
+			bottom: 50%;
+			transform: translateY(50%) rotate(-45deg);
+			
+		}
+
+		&::before{
+			transform: translateY(-50%) rotate(45deg);
+			
+		}
+	}
+
+	.media-max(777px,{
+		display: block;
+		vertical-align: middle;
+		
+		
+	});
+}
+
 /* General */
 
 @import '_header.less';
@@ -184,6 +254,7 @@ a{
 		&_transparent{
 			margin-left: 18px;
 			border: 2px solid @colorHLine;
+			background-color: #fff;
 			&:hover{
 				background-color: @colorHLine;
 				color: #fff;

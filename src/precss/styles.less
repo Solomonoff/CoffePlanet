@@ -219,13 +219,30 @@ a{
 	background-image: url(../img/bg.jpg);
 	background-size: cover;
 	background-position: center;
+	.media-max(520px,{
+		padding-top: 95px;
+		padding-bottom: 135px;
+	});
 
 	&__text{
-		font-size: 90px;
+		font-size: 6.25vw;
 		.size(7);
 		line-height: 1.2;
 		margin: 0;
 		margin-bottom: 41px;
+		.media-max(830px,{
+			font-size: 50px;
+			.size(8);
+		});
+	}
+
+	&__navigation{
+		.media-max(830px,{
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+
+		});
 	}
 
 	&__btn{
@@ -254,7 +271,7 @@ a{
 		&_transparent{
 			margin-left: 18px;
 			border: 2px solid @colorHLine;
-			background-color: #fff;
+			background-color:  rgba(255, 255, 255, 0.8);
 			&:hover{
 				background-color: @colorHLine;
 				color: #fff;
@@ -266,6 +283,10 @@ a{
 				border-radius: 50px;
 				color: #fff;
 			}
+			.media-max(830px,{
+				margin-left: 0;
+				margin-top: 20px;
+			});
 		}
 	}
 }

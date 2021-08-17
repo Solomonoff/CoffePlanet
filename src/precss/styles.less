@@ -137,6 +137,9 @@ a{
 	margin: 0;
 	text-align: center;
 	line-height: 1.1;
+	.media-max(500px,{
+		font-size: 40px;
+	});
 }
 
 .btn-mobile{
@@ -294,6 +297,10 @@ a{
 .menu{
 	padding-top: 180px;
 	padding-bottom: 84px;
+	.media-max(650px,{
+		padding-top: 90px;
+		padding-bottom: 60px;
+	});
 
 	&__h{
 		margin-bottom: 44px;
@@ -318,6 +325,8 @@ a{
 	justify-content: center;
 	align-items: baseline;
 	padding: 0;
+	min-width: 280px;
+	overflow-x: auto;
 
 	&__items{
 		@offset: 4px;
@@ -326,6 +335,9 @@ a{
 
 		& + &{
 			margin-left: 60px;
+			.media-max(600px,{
+				margin-left: 30px;
+			});
 		}
 
 		&.active,
@@ -387,13 +399,24 @@ a{
 }
 
 .about{
-	padding-top: 84px;
-	padding-bottom: 112px;
+	.res-padding(84,112);
+	.media-max(750px,{
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	});
 
 	&__slider{
 		width: 50%;
 		padding-right: @offset;
 		float: left;
+		.media-max(750px,{
+			float: none;
+			max-width: 568px;
+			width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+		});
 	}
 
 	&__btns{
@@ -402,6 +425,11 @@ a{
 		justify-content: flex-end;
 		align-items: center;
 		padding-right: 17px;
+		margin-bottom: 40px;
+		.media-max(750px,{
+			justify-content: center;
+			padding-right: 0;
+		});
 	}
 
 	&__figure{
@@ -412,6 +440,12 @@ a{
 
 	&__h{
 		text-align: left;
+		padding-top: 32px;
+		.media-max(750px,{
+			text-align: center;
+			order: -1;
+			width: 100%;
+		});
 	}
 
 	&__text{
@@ -419,6 +453,12 @@ a{
 		font-size: 14px;
 		line-height: 21px;
 		padding-top: 40px;
+		text-align: left;
+		.media-max(750px,{
+			text-align: center;
+			padding-top: 0;
+			
+		});
 	}
 
 	&__link{
@@ -430,11 +470,14 @@ a{
 		&:hover{
 			border-bottom: 1px solid @colorHLine;
 		}
+		.media-max(400px,{
+			font-size: 14px;
+		});
 	}
 }
 
 .article-slider{
-
+	
 	&__slide{
 		display: none;
 		&:first-child{
@@ -472,7 +515,7 @@ a{
 }
 
 .feauters{
-
+	
     text-align: center;
 
     &__h{
@@ -490,49 +533,42 @@ a{
     }
 
     &__feauters{
+		
         display: flex;
         flex-direction: row;
         justify-content: space-around;
 		padding-top: 92px;
+		position: relative;
 		
-		&::after{
-			position: absolute;
-			content: '';
-			border-right: 1px solid #ddd;
-			border-left: 1px solid #ddd;
-			height: 159px;
-			padding-left: 567px;
-			margin-top: -34px;	
-		}
-
-		&::before{
-			position: absolute;
-			content: '';
-			border-right: 1px solid #ddd;
-			height: 159px;
-			margin-top: -34px;
-		}
-
-		&__ico{
-			width: 70px;
-			height: 70px;
-		}
     }
+	&__ico{
+		padding-left: 6%;
+		.media-max(700px,{
+			width: 50%;
+		});
+		
+		& + &{
+			border-left: 1px solid #ddd;
+			
+		}
+	}
 }
 
 .visitors{
 	
 	text-align: center;
-
+	padding-top: 150px;
+	.res-padding(150px,170px);
 	&__h{
-		padding-top: 150px;
+		
 		font-weight: @fontNormal;
         font-size: 48px;
         line-height: 58.51px;
 	}
 
 	&__card{
-		width: 373px;
+		margin-top:30px;
+		min-width: 290px;
 		height: 512px;
 		background-color: #fff;
 		color: #111;
@@ -541,6 +577,9 @@ a{
 		padding: 30px;
 		.col();
 		.size(4);
+		.media-max(630px,{
+			.size(12);
+		});
 	}
 
 	&__photo{
@@ -558,7 +597,7 @@ a{
 		color: #111;
 		text-align: start;
 		padding-left: 15px;
-		padding-bottom: 21px;
+		padding-bottom: 20px;
 	}
 
 	&__comment{
@@ -567,17 +606,19 @@ a{
 		font-size: 16px;
 		text-align: start;
 		padding-left: 15px;
-		padding-bottom: 60px;
-		width: 307px;
+		margin-bottom: 60px;
+		width: auto;
 		height: 115px;
 	}
 
 	&__date{
-		display: block;
+		display: inline-block;
 		color: #777;
-		text-align: start;
-		padding-left: 15px;
-		padding-top: 60px;
+		margin-left: -120px;
+		padding-top: 30px;
+		text-align: left;
+		
+		
 	}
 
 	&__row{

@@ -168,13 +168,21 @@
 .contacts{
     padding-top: 170px;
     padding-bottom: 50px;
+    .res-padding(120px,50px,750px);
     &__cont{
         .row();
+        .media-max(960px,{
+            display: block;
+            
+        });
     }
 
     &__nmn{
         .col();
         .size(4);
+        .media-max(960px,{
+            .size(12);
+        });
     }
     
     &__h{
@@ -191,6 +199,7 @@
         padding-left: 25px;
         width: 375px;
         padding-bottom: 13px;
+        
 
         &_1{
             background-image: url("../img/time.svg");
@@ -244,11 +253,16 @@
 
         .col();
         .size(8);
+        .media-max(960px,{
+            .size(12);
+        });
 
         &_iframe{
             width: 100%;
             height: 100%;
             min-height: 461px;
+            
+            
         }
     }
 

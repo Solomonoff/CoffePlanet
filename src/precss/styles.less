@@ -515,8 +515,9 @@ a{
 }
 
 .feauters{
-	
+	flex-wrap: wrap;
     text-align: center;
+		
 
     &__h{
         font-weight: @fontNormal;
@@ -532,7 +533,7 @@ a{
 		color: @colorTextGraySection;
     }
 
-    &__feauters{
+    &__pictures{
 		
         display: flex;
         flex-direction: row;
@@ -540,17 +541,47 @@ a{
 		padding-top: 92px;
 		position: relative;
 		
+		
     }
 	&__ico{
-		padding-left: 6%;
-		.media-max(700px,{
-			width: 50%;
-		});
 		
-		& + &{
-			border-left: 1px solid #ddd;
+		&_1{
+			width: 25%;
+			.media-max(700px,{
+				width: 50%;
+				display: block;
+			});
 			
 		}
+		&_2{
+			width: 25%;
+			border-left: 1px solid #ddd;
+			.media-max(700px,{
+				width: 50%;
+				display: block;
+			});
+		}
+		&_3{
+			width: 25%;
+			border-left: 1px solid #ddd;
+			.media-max(700px,{
+				width: 50%;
+				display: block;
+			});
+		}
+		&_4{
+			width: 25%;
+			border-left: 1px solid #ddd;
+			.media-max(700px,{
+				width: 50%;
+				display: block;
+			});
+		}
+	
+		
+		
+		padding-top: 20px;
+		
 	}
 }
 

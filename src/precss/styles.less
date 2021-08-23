@@ -535,7 +535,7 @@ a{
 
     &__pictures{
 		
-        display: flex;
+        .row();
         flex-direction: row;
         justify-content: space-around;
 		padding-top: 92px;
@@ -543,46 +543,61 @@ a{
 		
 		
     }
+	
 	&__ico{
 		
 		&_1{
-			width: 25%;
+			.col();
+			.size(3);
+			
 			.media-max(700px,{
-				width: 50%;
-				display: block;
+				.size(6);
+				border-right: 1px solid #ddd;
+				box-shadow: 5px 0px 5px -4px #ddd;
 			});
 			
 		}
 		&_2{
-			width: 25%;
+			.col();
+			.size(3);
 			border-left: 1px solid #ddd;
+
 			.media-max(700px,{
-				width: 50%;
-				display: block;
+				.size(6);
+				box-shadow: -5px 0px 5px -4px #ddd;
+				
 			});
+			
 		}
 		&_3{
-			width: 25%;
+			.col();
+			.size(3);
 			border-left: 1px solid #ddd;
 			.media-max(700px,{
-				width: 50%;
-				display: block;
+				.size(6);
+				border: none;
+				border-top: 1px solid #ddd;
+				border-right: 1px solid #ddd;
+				box-shadow: 5px 0px 5px -4px #ddd;
+				padding-top: 20px;
 			});
+			
 		}
 		&_4{
-			width: 25%;
+			.col();
+			.size(3);
 			border-left: 1px solid #ddd;
 			.media-max(700px,{
-				width: 50%;
-				display: block;
+				.size(6);
+				border-top: 1px solid #ddd;
+				padding-top: 20px;
+				box-shadow: -5px 0px 5px -4px #ddd;
 			});
+			
 		}
-	
-		
-		
-		padding-top: 20px;
 		
 	}
+	
 }
 
 .visitors{

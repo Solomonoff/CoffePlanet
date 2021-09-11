@@ -50,8 +50,13 @@
 
 .modal-form{
     position: relative;
-    
+    display: none;
     text-align: center;
+
+    &.active{
+        display: block;
+    }
+
     &__h{
         margin: 0;
         padding: 0;
@@ -117,6 +122,10 @@
 
 .modal-alert{
     text-align: center;
+
+    &.active{
+        display: block;
+    }
     
     &__ico{
         position: relative;
@@ -139,7 +148,7 @@
 
 .modal-video{
     
-    display: flex;
+    
     margin: 0 auto;
 
     &.active{

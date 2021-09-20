@@ -2,6 +2,7 @@
 @import 'libs/vars.less';
 @import 'libs/mixins.less';
 @import '_foot.less';
+@import '../../node_modules/slick-carousel/slick/slick.less';
 
 
 /* Set defaults */
@@ -9,6 +10,7 @@
 html, 
 body{
 	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 
 *,
@@ -462,10 +464,13 @@ a{
 	}
 
 	&__link{
+		.btn-reset();
 		font-weight: @fontSBold;
 		font-size: 16px;
 		line-height: 21px;
 		color: @colorMain;
+		
+		
 
 		&:hover{
 			border-bottom: 1px solid @colorHLine;
@@ -487,6 +492,7 @@ a{
 
 	&__img{
 		vertical-align: bottom;
+		
 	}
 
 	

@@ -1,6 +1,6 @@
 
 <div class="modal-overlay">
-    <div class="modal modal-form">
+    <div id="modal-form" class="modal modal-form">
         <h2 class="modal-form__h">
             Book a table
         </h2>
@@ -21,7 +21,7 @@
         </form>
         
     </div>
-    <div class="modal modal-video">
+    <div id="modal-video" class="modal modal-video">
         <div class="modal-video__container">
             <div class="modal-video__wrap">
                 <iframe class="modal-video__video" width="560" height="315" src="https://www.youtube.com/embed/F6va6tg62qg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -29,7 +29,7 @@
             
         </div>
     </div>
-    <div class="modal modal-alert">
+    <div id="modal-alert" class="modal modal-alert">
         <div class="modal-alert__ico">
             {% include 'parts/svgo/ico-ok.svg' %}
             
@@ -88,7 +88,7 @@
     
 </footer>
 
-
+<script>src="js/libs/jquery-3.1.1.min.js"</script>
 <script src="./js/js.js"></script>
 </body>
 </html>

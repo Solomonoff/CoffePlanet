@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import 'slick-carousel';
 
-$('.article-slider__slide').slick({
+$('.about__figure').slick({
     autoplay: true,
     autoplaySpeed:5000,
     prevArrow: '.article-slider__btn_prev',
@@ -49,7 +49,7 @@ function modalOpen(e){
 }
 
 function modalClose(){
-    let actives = document.querySelectorAll('modal-overlay.active, modal.active');
+    let actives = document.querySelectorAll('.modal-overlay.active, modal.active');
     actives.forEach(active =>{
         active.classList.remove('active');
     });
@@ -60,23 +60,35 @@ modalBTNS.forEach( modalBTNS =>{
 });
 
 modalCloser.addEventListener('click', modalClose);
-
+modalModals.forEach( modal => {
+    modal.addEventListener('click', e => {
+        e.stopPropagation();
+    });
+});
 modalOverlay.addEventListener('click', modalClose);
 
-// console.log('Hello, world!');
-// let btnc = document.querySelector('.banner__btn_colored');
-// let formc = document.querySelectorAll('div.modal-overlay, div.modal, div.modal-form');
-// btnc.addEventListener('click', function(e){
-//     formc.classList.add('active');
-// });
+window.addEventListener('keydown', e => {
+    if( e.key === 'Escape'){
+        modalClose();
+        mobileMenuClose();
+    }
+});
 
-// let btnt = document.querySelector('.banner__btn_transparent');
-// let formt = document.querySelector('.modal-overlay');
-// btnt.addEventListener('click', function(e){
-//     formt.classList.add('active');
-// });
+let tabLinks = document.querySelectorAll('.tabs__link');
+function tabsToggle(e){
+    e.preventDefault();
+    let anchor = e.target.getAttribute('href');
+    let goal = document.querySelector(anchor);
 
-// document.getElement('banner__btn_colored').addEventListener('click', () => {
-//     document.querySelector('modal-form').classList.toggle('is-active');
-  
-//   });
+    let actives = document.querySelectorAll('.tabs__items.active, tabs-content__section.active');
+    actives.forEach( active => {
+        active.classList.remove('active');
+    });
+    e.target.parentElement.classList.add('active');
+    goal.classList.add('active');
+
+}
+
+tabLinks.forEach ( tabLink => {
+    tabLink.addEventListener('click', tabsToggle);
+});

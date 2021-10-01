@@ -49,7 +49,7 @@ function modalOpen(e){
 }
 
 function modalClose(){
-    let actives = document.querySelectorAll('.modal-overlay.active, modal.active');
+    let actives = document.querySelectorAll('.modal-overlay.active, .modal.active');
     actives.forEach(active =>{
         active.classList.remove('active');
     });
@@ -80,7 +80,7 @@ function tabsToggle(e){
     let anchor = e.target.getAttribute('href');
     let goal = document.querySelector(anchor);
 
-    let actives = document.querySelectorAll('.tabs__items.active, tabs-content__section.active');
+    let actives = document.querySelectorAll('.tabs__items.active, .tabs-content__section.active');
     actives.forEach( active => {
         active.classList.remove('active');
     });
